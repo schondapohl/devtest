@@ -9,6 +9,8 @@
 
         // Wait for device API libraries to load
         //
+
+        navigator.splashscreen.show();
         document.addEventListener("deviceready", onDeviceReady, false);
 
         // device APIs are available
@@ -21,7 +23,7 @@
                     'Device UUID: '     + device.uuid     + '<br />' +
                     'Device Model: '    + device.model    + '<br />' +
                     'Device Version: '  + device.version  + '<br />';
-            /*
+
             initControls();
             manageGui();
             generiereProgramm();
@@ -29,7 +31,7 @@
             clientListen();
             verbindungpruefen();
             navigator.splashscreen.hide();
-*/
+
         }
 
     </script>

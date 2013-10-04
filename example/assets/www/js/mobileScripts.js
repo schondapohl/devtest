@@ -579,11 +579,14 @@ function umfrageAktiv() {
     console.log("umfrageAktiv() - Pruefen ob Umfrage aktiv ist ...");
     var uid = null;
     if (typeof device === "undefined") {
+
         uid = uniqueID;
     }
     else {
         uid = device.uuid;
     }
+
+    alert("ddevid" + device.uuid);
     console.log("umfrageAktiv() - Meine UniqueID " + uid);
     $.ajax({
         dataType:'jsonp',
