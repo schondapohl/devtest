@@ -27,13 +27,16 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        //document.addEventListener('load', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        // app.receivedEvent('deviceready');
+        navigator.splashscreen.hide();
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +50,22 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+
+// onSuccess Geolocation
+//
+function onSuccess(position) {
+    alert(device.uuid);
+}
+
+function test()
+{
+    alert("device" + device.uuid);
+}
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+        'message: ' + error.message + '\n');
+}
