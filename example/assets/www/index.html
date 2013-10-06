@@ -23,15 +23,6 @@
                     'Device UUID: '     + device.uuid     + '<br />' +
                     'Device Model: '    + device.model    + '<br />' +
                     'Device Version: '  + device.version  + '<br />';
-
-            initControls();
-            manageGui();
-            generiereProgramm();
-            generiereAutorenListe();
-            clientListen();
-            verbindungpruefen();
-            navigator.splashscreen.hide();
-
         }
 
     </script>
@@ -2430,6 +2421,15 @@
 <!-- END Invsible Stuff -->
 
 <script src="http://app.emzed.de:8081/socket.io/socket.io.js"></script>
+<script>
+    initControls();
+    manageGui();
+    generiereProgramm();
+    generiereAutorenListe();
+    clientListen();
+    verbindungpruefen();
+    navigator.splashscreen.hide();
+</script>
 </div>
 </div>
 </body>
